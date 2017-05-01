@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 6</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="money.js"></script> 
+        <script>
+            function myFunction() {
+            var example = function(data) {
+            fx.rates = data.rates
+            var rate = fx(1).from("GBP").to("USD")
+            alert("$" + rate.toFixed(4))
+          }
+
+          $.getJSON("http://api.fixer.io/latest", example)
+          }
+        </script>
+      <style>
+      div
+      {
+       line-height: 200px;
+       height: 200px;
+       border: 3px solid green;
+       background-color: #FFF8DC;
+       color: green;
+       text-align: center;
+      }
+      </style>
+    </head>   
+    <body>   
+    <div onclick="myFunction()"><h2>Click To Convert 1 British Pound To US Dollars</h2></div>
+    </body>
+</html>
+
+
+
